@@ -41,7 +41,7 @@ jobs:
     - name: commit changes
       run: |
         git config --global user.name echo "NICKNAME=$NICKNAME" >> .env
-        git config --global user.email "EMAIL=$EMAIL" >> .env
+        git config --global user.email echo "EMAIL=$EMAIL" >> .env
         git add -A
         git commit -am "auto update README.md"
       env:
