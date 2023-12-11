@@ -15,3 +15,4 @@
 |2557. Hello World|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2557.%E2%80%85Hello%E2%80%85World/README.md)|
 |2675. 문자열 반복|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2675.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EB%B0%98%EB%B3%B5/README.md)|
 |2908. 상수|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2908.%E2%80%85%EC%83%81%EC%88%98/README.md)|
+|5622. 다이얼|[링크](./%EB%B0%B1%EC%A4%80/Bronze/5622.%E2%80%85%EB%8B%A4%EC%9D%B4%EC%96%BC/%EB%8B%A4%EC%9D%B4%EC%96%BC.py)|
