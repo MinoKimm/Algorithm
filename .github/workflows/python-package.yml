@@ -37,16 +37,13 @@ jobs:
     - name: Run update.py
       run: |
         python update.py
-      # 3) 추가된 파일 commit (닉네임, 이메일은 secrets으로 관리)
+      # 3) 추가된 파일 commit
     - name: commit changes
       run: |
-        git config --global user.name echo "NICKNAME=$NICKNAME" >> .env
-        git config --global user.email echo "EMAIL=$EMAIL" >> .env
+        git config --global user.name 'jyys0531'
+        git config --global user.email 'jyys0531@gmail.com'
         git add -A
         git commit -am "auto update README.md"
-      env:
-        NICKNAME: ${{secrets.NICKNAME}}
-        EMAIL: ${{secrets.EMAIL}}
       # 4) main에 push
     - name: Push changes
       run: |
