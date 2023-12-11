@@ -1,0 +1,50 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+# Github Actions 탭에서 확인할 수 있는 액션 이름
+name: Update Readme
+
+# jogs가 실행되어야 하는 상황 정의
+on:
+  push:
+    # main 브랜치에 push 발생했을 떄,
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# 실제 실행될 내용 
+jobs:
+  build:
+    # 빌드 환경
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+      # 1) 스크립트에 필요한 dependency 설치 
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        python3 -m pip install python-leetcode
+      # 2) update.py 실행
+    - name: Run update.py
+      run: |
+        python update.py
+      # 3) 추가된 파일 commit
+    - name: commit changes
+      run: |
+        git config --global user.name 'jyys0531'
+        git config --global user.email 'jyys0531@gmail.com'
+        git add -A
+        git commit -am "auto update README.md"
+      # 4) main에 push
+    - name: Push changes
+      run: |
+        git push
