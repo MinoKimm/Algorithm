@@ -40,7 +40,7 @@ jobs:
       # 3) 추가된 파일 commit
     - name: commit changes
       run: |
-        git config --global user.name 'jyys0531'
+        git config --global user.name 'MinoKimm'
         git config --global user.email 'jyys0531@gmail.com'
         git add -A
         git commit -am "auto update README.md"
