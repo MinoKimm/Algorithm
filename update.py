@@ -4,7 +4,7 @@ import os
 from urllib import parse
 
 HEADER="""#
-### 백준, 프로그래머스 문제 풀이 목록입니다.
+### BOJ, LeetCode, Programmers, SWEA 문제 풀이 목록입니다.
 ### 프로그래머스의 경우, 푼 문제 목록에 대한 마이그레이션 필요합니다.
 """
 
